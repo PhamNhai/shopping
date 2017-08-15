@@ -4262,7 +4262,6 @@ class ComposerStaticInit20396a4bc9a0763cbb0392874acd9b6d
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
-        'UpdateCommentParentIdInCommentsTable' => __DIR__ . '/../..' . '/database/migrations/2017_08_10_073704_update_comment_parent_id_in_comments_table.php',
         'UpdateStatusInOrdersTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_27_052827_update_status_in_orders_table.php',
         'UsersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/UsersTableSeeder.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
