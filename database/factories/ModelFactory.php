@@ -116,7 +116,7 @@ $factory->define(App\Models\Product::class,function($faker){
 	$unit_price = 10000;
 	$total_quanity = 1000;
 	$top_product = 1000;
-	$category_id = rand(1,100);
+	$category_id = rand(1,10);
 	$shop_product_id = rand(1,100);
 	$information = ('Sed porttitor pretium venenatis. Suspendisse potenti. Aliquam quis ligula elit. Aliquam at orci ac neque semper dictum. Sed tincidunt scelerisque ligula, et facilisis nulla hendrerit non. Suspendisse potenti. Pellentesque non accumsan orci.
 
