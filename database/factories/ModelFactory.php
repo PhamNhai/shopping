@@ -104,7 +104,7 @@ $factory->define(App\Models\OrderDetail::class, function($faker){
     ];
 });
 $factory->define(App\Models\Payment::class, function($faker){
-    $payment_type_id = rand(0,3);
+    $payment_type_id = rand(1,3);
         return [
         'payment_type_id' => $payment_type_id
     ];
