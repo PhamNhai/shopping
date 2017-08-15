@@ -76,7 +76,7 @@ $factory->define(App\Models\Order::class, function($faker){
     $content = $faker->unique()->word;
     $status = rand(1,2);
     $total_price = 500000;
-    $user_id = rand(1,5);
+    $user_id = rand(1,2);
     $payment_id = rand(1,10);
 
     return [
