@@ -1,5 +1,4 @@
-<div class="col-md-8 col-lg-9" id="search_content">
-    <h2 class="site-heading" id="product_name"><strong>{{ $type }}</strong></h2>
+<h2 class="site-heading" id="product_name"><strong>{{ $type }}</strong></h2>
     <hr>
     <div class="row store-items">
     @foreach($products as $product)
@@ -23,4 +22,3 @@
     @endforeach
     {{ $products->links() }}
     </div>
-</div>
