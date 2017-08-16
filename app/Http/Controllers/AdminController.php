@@ -38,7 +38,7 @@ class AdminController extends Controller
 
     public function getAdd()
     {
-        $categoryParent = Category::where('category_parent_id', NULL)->get();
+        $categoryParent = Category::where('category_parent_id', null)->pluck('name', 'category_id')->toArray();
         $none['0'] = "None";
         $categoryParent = $none + $categoryParent;
 
