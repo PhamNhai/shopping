@@ -192,13 +192,13 @@ class CategoryController extends Controller
                                                     ->orWhere('name', 'name','LIKE',"{$home} & %")
                                                     ->orWhere('name', 'name','LIKE',"{$hobby} & %")->get();
                                 })
-                                ->where('name', $type)
+                                ->where('name','LIKE', "%$type%")
                                 ->where('unit_price', '>', $min)
                                 ->where('unit_price', '<', $max)
                                 ->paginate(6);
                 }
                 else {
-                    $products = Product::where('name', $type)
+                    $products = Product::where('name','LIKE', "%$type%")
                                 ->where('unit_price', '>', $min)
                                 ->where('unit_price', '<', $max)
                                 ->paginate(6);
@@ -214,14 +214,14 @@ class CategoryController extends Controller
                                                     ->orWhere('name','LIKE',"{$home} & %")
                                                     ->orWhere('name','LIKE',"{$hobby} & %")->get();
                                 })
-                                ->where('name', $type)
+                                ->where('name','LIKE', "%$type%")
                                 ->where('unit_price', '>', $min)
                                 ->where('unit_price', '<', $max)
                                 ->where('rate_count', $star)
                                 ->paginate(6);
                 }
                 else {
-                    $products = Product::where('name', $type)
+                    $products = Product::where('name','LIKE', "%$type%")
                                 ->where('unit_price', '>', $min)
                                 ->where('unit_price', '<', $max)
                                 ->where('rate_count', $star)
