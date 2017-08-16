@@ -39,7 +39,7 @@
                                 </div>
                                 <div class="store-item-image">
                                     <a href="{{ route('product_details', $product->product_id) }}">
-                                    <img src="{{ $product -> images[0] -> link }}" alt="" class="img-responsive">
+                                    {{ Html::image(($product -> images[0] -> link) ? '/assets/uploads/' . $product -> images[0] -> link : config('settings.avatar_default_path'), trans('title.this-is-avatar'), ['class' => 'img-responsive ',]) }}
                                     </a>
                                 </div>
                                 <div class="store-item-info clearfix">

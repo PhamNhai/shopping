@@ -38,13 +38,13 @@
                             <a href="{{ $product -> images[0] -> link }}" class="gallery-link">{{ Html::image(($product -> images[0] -> link) ? '/assets/uploads/' . $product -> images[0] -> link : config('settings.avatar_default_path'), trans('title.this-is-avatar'), ['class' => 'img-responsive ',]) }}</a>
                             <div class="row push-bit">
                                 <div class="col-xs-4">
-                                    <a href="{{ $product -> images[0] -> link }}" class="gallery-link"><img src="{{ $product -> images[0] -> link }}" alt="" class="img-responsive"></a>
+                                    <a href="{{ $product -> images[0] -> link }}" class="gallery-link">{{ Html::image(($product -> images[0] -> link) ? '/assets/uploads/' . $product -> images[0] -> link : config('settings.avatar_default_path'), trans('title.this-is-avatar'), ['class' => 'img-responsive ',]) }}</a>
                                 </div>
                                 <div class="col-xs-4">
-                                    <a href="{{ $product -> images[0] -> link }}" class="gallery-link"><img src="{{ $product -> images[0] -> link }}" alt="" class="img-responsive"></a>
+                                    <a href="{{ $product -> images[0] -> link }}" class="gallery-link">{{ Html::image(($product -> images[0] -> link) ? '/assets/uploads/' . $product -> images[0] -> link : config('settings.avatar_default_path'), trans('title.this-is-avatar'), ['class' => 'img-responsive ',]) }}</a>
                                 </div>
                                 <div class="col-xs-4">
-                                    <a href="{{ $product -> images[0] -> link }}" class="gallery-link"><img src="{{ $product -> images[0] -> link }}" alt="" class="img-responsive"></a>
+                                    <a href="{{ $product -> images[0] -> link }}" class="gallery-link">{{ Html::image(($product -> images[0] -> link) ? '/assets/uploads/' . $product -> images[0] -> link : config('settings.avatar_default_path'), trans('title.this-is-avatar'), ['class' => 'img-responsive ',]) }}</a>
                                 </div>
                             </div>
                         </div>
