@@ -38,9 +38,9 @@ class AdminController extends Controller
 
     public function getAdd()
     {
-        $categoryParent = Category::where('category_parent_id', 0)->get();
-        // $none['0'] = "None";
-        // $categoryParent = $none + $categoryParent;
+        $categoryParent = Category::where('category_parent_id', NULL)->get();
+        $none['0'] = "None";
+        $categoryParent = $none + $categoryParent;
 
         return view('admin.add_category', compact('categoryParent'));
     }
@@ -114,7 +114,7 @@ class AdminController extends Controller
 
     public function getAddProduct()
     {
-        $category_parent = Category::where('category_parent_id',  0)->get();
+        $category_parent = Category::where('category_parent_id',  NULL)->get();
         $category = Category::where('category_parent_id', $category_parent[0]['category_id'])->get();
         $shop_product = ShopProduct::all();
 
