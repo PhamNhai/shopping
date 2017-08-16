@@ -236,7 +236,7 @@ class CategoryController extends Controller
 
             return response()->json($result);
         }
-       $products = Product::where('name','LIKE', "%{name}%")->paginate(6);
+       $products = Product::where('name','LIKE', "%$name%")->paginate(6);
         if (count($products) == config('settings.error')) {
             $products = Product::whereIn('shop_product_id',  function($query) use ($name) {
                 $query->select('shop_product_id')->from('shop_products')->where('shop_product_name',  $name)->get();
