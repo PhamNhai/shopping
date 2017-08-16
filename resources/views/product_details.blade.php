@@ -1,13 +1,13 @@
 @extends('layouts.master')
 @section('text-center')
-	<section class="site-section site-section-light site-section-top themed-background-dark">
+    <section class="site-section site-section-light site-section-top themed-background-dark">
         <div class="container text-center">
             <h1 class="animation-slideDown"><strong>{{ $product -> name }}</strong></h1>
         </div>
     </section>
-   	@endsection
+    @endsection
 @section('content')
-	<section class="site-content site-section">
+    <section class="site-content site-section">
         <div class="container">
             <div class="row">
             @if(session('errors'))
@@ -35,16 +35,16 @@
                     <div class="row" data-toggle="lightbox-gallery">
                         <!-- Images -->
                         <div class="col-sm-6 push-bit">
-                            <a href="{{ $product -> images[0] -> link }}" class="gallery-link">{{ Html::image(($product -> images[0] -> link) ? '/assets/uploads/' . $product -> images[0] -> link : config('settings.avatar_default_path'), trans('title.this-is-avatar'), ['class' => 'img-responsive ',]) }}</a>
+                            <a href="{{ $product -> images[0] -> link }}" class="gallery-link"><img src="{{ $product -> images[0] -> link }}" alt="" class="img-responsive push-bit"></a>
                             <div class="row push-bit">
                                 <div class="col-xs-4">
-                                    <a href="{{ $product -> images[0] -> link }}" class="gallery-link">{{ Html::image(($product -> images[0] -> link) ? '/assets/uploads/' . $product -> images[0] -> link : config('settings.avatar_default_path'), trans('title.this-is-avatar'), ['class' => 'img-responsive ',]) }}</a>
+                                    <a href="{{ $product -> images[0] -> link }}" class="gallery-link"><img src="{{ $product -> images[0] -> link }}" alt="" class="img-responsive"></a>
                                 </div>
                                 <div class="col-xs-4">
-                                    <a href="{{ $product -> images[0] -> link }}" class="gallery-link">{{ Html::image(($product -> images[0] -> link) ? '/assets/uploads/' . $product -> images[0] -> link : config('settings.avatar_default_path'), trans('title.this-is-avatar'), ['class' => 'img-responsive ',]) }}</a>
+                                    <a href="{{ $product -> images[0] -> link }}" class="gallery-link"><img src="{{ $product -> images[0] -> link }}" alt="" class="img-responsive"></a>
                                 </div>
                                 <div class="col-xs-4">
-                                    <a href="{{ $product -> images[0] -> link }}" class="gallery-link">{{ Html::image(($product -> images[0] -> link) ? '/assets/uploads/' . $product -> images[0] -> link : config('settings.avatar_default_path'), trans('title.this-is-avatar'), ['class' => 'img-responsive ',]) }}</a>
+                                    <a href="{{ $product -> images[0] -> link }}" class="gallery-link"><img src="{{ $product -> images[0] -> link }}" alt="" class="img-responsive"></a>
                                 </div>
                             </div>
                         </div>
