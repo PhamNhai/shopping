@@ -56,7 +56,7 @@ class AdminController extends Controller
             ]);
         $category = new Category;
         $category->name = $request->name;
-        if($category_parent_id == 0 ) {
+        if($request->category_parent_id == 0 ) {
             $category->category_parent_id = null;
         } else {
             $category->category_parent_id = $request->category_parent_id;
