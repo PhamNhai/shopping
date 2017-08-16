@@ -39,9 +39,13 @@
                                 </div>
                                 <div class="store-item-image">
                                     <a href="{{ route('product_details', $product->product_id) }}">
+<<<<<<< HEAD
                                     {{ Html::image(($product->images[0]->hasImage()) ? '/assets/uploads/' . $product->images[0]->link : $product->images[0]->link, trans('title.this-is-image'), [
                                             'class' => 'img-responsive',
                                         ]) }}
+=======
+                                    {{ Html::image(($product -> images[0] -> link) ? '/assets/uploads/' . $product -> images[0] -> link : config('settings.avatar_default_path'), trans('title.this-is-avatar'), ['class' => 'img-responsive ',]) }}
+>>>>>>> 3d00003de14365481efd80f7a2f3d04d0df140cb
                                     </a>
                                 </div>
                                 <div class="store-item-info clearfix">
