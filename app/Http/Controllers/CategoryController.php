@@ -209,10 +209,10 @@ class CategoryController extends Controller
                     $products = Product::whereIn('category_id',  function($query) use ($beauty, $drink, $game, $electronic, $home, $hobby) {
                                     $query->select('category_id')->from('categories')->where('name','LIKE',"{$beauty} & %")
                                                     ->orWhere('name','LIKE',"{$drink} & %")
-                                                    ->orWhere('name', 'name','LIKE',"{$game} & %")
-                                                    ->orWhere('name', 'name','LIKE',"{$electronic} & %")
-                                                    ->orWhere('name', 'name','LIKE',"{$home} & %")
-                                                    ->orWhere('name', 'name','LIKE',"{$hobby} & %")->get();
+                                                    ->orWhere('name', 'LIKE',"{$game} & %")
+                                                    ->orWhere('name','LIKE',"{$electronic} & %")
+                                                    ->orWhere('name','LIKE',"{$home} & %")
+                                                    ->orWhere('name','LIKE',"{$hobby} & %")->get();
                                 })
                                 ->where('name', $type)
                                 ->where('unit_price', '>', $min)
@@ -236,7 +236,7 @@ class CategoryController extends Controller
 
             return response()->json($result);
         }
-       $products = Product::where('name',  $name)->paginate(6);
+       $products = Product::where('name','LIKE', "% {name} %")->paginate(6);
         if (count($products) == config('settings.error')) {
             $products = Product::whereIn('shop_product_id',  function($query) use ($name) {
                 $query->select('shop_product_id')->from('shop_products')->where('shop_product_name',  $name)->get();
