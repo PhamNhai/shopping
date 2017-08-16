@@ -114,11 +114,7 @@ class AdminController extends Controller
 
     public function getAddProduct()
     {
-<<<<<<< HEAD
         $category_parent = Category::where('category_parent_id',  NULL)->get();
-=======
-        $category_parent = Category::where('category_parent_id',  null)->get();
->>>>>>> 8f4524ccffc47b9ac8d16956c7b4db42ccf0df02
         $category = Category::where('category_parent_id', $category_parent[0]['category_id'])->get();
         $shop_product = ShopProduct::all();
 
