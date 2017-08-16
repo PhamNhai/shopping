@@ -130,7 +130,7 @@ class CategoryController extends Controller
     public function typeCategory($group, $name)
     {
         $products = Product::whereIn('category_id',  function($query) use ($name) {
-            $query->select('category_id')->from('categories')->where('name',  $name)->get();
+            $query->select('category_id')->from('categories')->where('name','LIKE',"% & {$name}")->get();
         })->paginate(6);
         $type = $name;
 
