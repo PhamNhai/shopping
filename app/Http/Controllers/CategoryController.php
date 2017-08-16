@@ -185,12 +185,12 @@ class CategoryController extends Controller
             if($star == 0) {
                 if($beauty != null || $drink != null || $game != null || $electronic != null || $home != null || $home != null || $hobby != null){
                     $products = Product::whereIn('category_id',  function($query) use ($beauty, $drink, $game, $electronic, $home, $hobby) {
-                                    $query->select('category_id')->from('categories')->where('name',  $beauty)
-                                                    ->orWhere('name', $drink)
-                                                    ->orWhere('name', $game)
-                                                    ->orWhere('name', $electronic)
-                                                    ->orWhere('name', $home)
-                                                    ->orWhere('name', $hobby)->get();
+                                    $query->select('category_id')->from('categories')->where('name','LIKE',"{$beauty} & %")
+                                                    ->orWhere('name','LIKE',"{$drink} & %")
+                                                    ->orWhere('name', 'name','LIKE',"{$game} & %")
+                                                    ->orWhere('name', 'name','LIKE',"{$electronic} & %")
+                                                    ->orWhere('name', 'name','LIKE',"{$home} & %")
+                                                    ->orWhere('name', 'name','LIKE',"{$hobby} & %")->get();
                                 })
                                 ->where('name', $type)
                                 ->where('unit_price', '>', $min)
@@ -207,12 +207,12 @@ class CategoryController extends Controller
             else {
                 if($beauty != null || $drink != null || $game != null || $electronic != null || $home != null || $home != null || $hobby != null){
                     $products = Product::whereIn('category_id',  function($query) use ($beauty, $drink, $game, $electronic, $home, $hobby) {
-                                    $query->select('category_id')->from('categories')->where('name',  $beauty)
-                                                    ->orWhere('name', $drink)
-                                                    ->orWhere('name', $game)
-                                                    ->orWhere('name', $electronic)
-                                                    ->orWhere('name', $home)
-                                                    ->orWhere('name', $hobby)->get();
+                                    $query->select('category_id')->from('categories')->where('name','LIKE',"{$beauty} & %")
+                                                    ->orWhere('name','LIKE',"{$drink} & %")
+                                                    ->orWhere('name', 'name','LIKE',"{$game} & %")
+                                                    ->orWhere('name', 'name','LIKE',"{$electronic} & %")
+                                                    ->orWhere('name', 'name','LIKE',"{$home} & %")
+                                                    ->orWhere('name', 'name','LIKE',"{$hobby} & %")->get();
                                 })
                                 ->where('name', $type)
                                 ->where('unit_price', '>', $min)
