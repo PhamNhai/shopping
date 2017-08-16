@@ -35,6 +35,32 @@ class CategorySeeder extends Seeder
         DB::table('categories')->insert([
             'name' => 'hobby',
         ]);
+
+        DB::table('categories')->insert([
+            'name' => 'beauty & cosmetic',
+            'category_parent_id' => 1,
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'beauty & men',
+            'category_parent_id' => 1,
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'beauty & vitamin',
+            'category_parent_id' => 1,
+        ]);
+
+
+        DB::table('categories')->insert([
+            'name' => 'food & rice_noodles',
+            'category_parent_id' => 2,
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'food & spice_seasoning',
+            'category_parent_id' => 2,
+        ]);
     }
 }
 
